@@ -58,5 +58,11 @@ def main():
             if links not in all_links: all_links.append(links), print(*links, sep="\n")
     print(*all_links, sep="\n")
 
+    with open("all_cats.txt", "a") as file:
+        for categ in all_links:
+            for subcateg in categ:
+                file.write("\n"+subcateg)
+                print(subcateg)
+
 if __name__ == "__main__":
     main()
